@@ -5,15 +5,14 @@
 html, body{
     margin: 0;
     height: 100%;
-    background: linear-gradient(90deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+    background: linear-gradient(90deg, rgba(34,193,195,1) 0%, rgba(253,209,45,1) 100%);
 }
 
 #root {
     display: grid;
     height: 100%;
-    grid-template-columns: [content-start] repeat(4,  [col-start] 25% [col-end]) [content-end];
-    grid-template-rows: [row-1-start] 10% [row-1-end content-start] 90% [content-end] ;
-    /*grid-column-gap: 0.5rem;*/
+    grid-template-columns: [content-start] 100% [content-end];
+    grid-template-rows: [row-1-start] 5% [row-1-end content-start] 95% [content-end] ;
 }
 
 
@@ -24,7 +23,7 @@ html, body{
     align-items: center;
     grid-area: row-1-start / content-start / row-1-end / content-end;
     z-index: 10;
-    padding: 0.2rem 1.5rem;
+    padding: 0.5rem 1.5rem;
 }
 
 .main-header > div{
@@ -39,7 +38,7 @@ html, body{
     display: inline-block;
     text-decoration: none;
     text-align: left;
-    height: 4rem;
+    height: 2rem;
     font-weight: bold;
 
 }
@@ -53,6 +52,8 @@ html, body{
 .main-header__brand h1{
     vertical-align: middle;
     font-size: inherit;
+    margin: 0;
+    padding: 0;
     display: inline-block;
 }
 .main-nav{
@@ -66,19 +67,19 @@ html, body{
 }
 
 .main-nav__item > button{
-    color: white;
+    color: ghostwhite;
     font-weight: bold;
     text-transform: uppercase;
     background: transparent;
-    border: white solid 2px;
-    border-radius: 30%;
-    padding: 0.5rem;
+    border: none;
+    border-radius: 1rem;
+    padding: 1rem;
 }
 
 .main-nav__item > button:hover,
 .main-nav__item > button:active{
-    background: white;
-    color: black;
+
+    border-bottom: white 3px solid;
 }
 
 #content{
@@ -95,11 +96,11 @@ html, body{
 
 }
 
-#content > div {
-    background: white;
-    opacity: 50%;
+.content-item {
+    background: rgba(255,255, 255, 0.6);
     border-radius: 0.5rem;
     box-shadow: 4px 4px black;
+    overflow: hidden;
 }
 
 .overview{
@@ -111,6 +112,69 @@ html, body{
     grid-area: info;
 }
 
-.tweet-cloud{
+.tweets-cloud{
     grid-area: main;
+}
+
+.content__item__topic{
+    opacity: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    color: black
+}
+
+.content-item__description{
+    background: linear-gradient(90deg, rgba(34,193,195,1) 0%, rgba(253,209,45,1) 100%);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin: 0.5rem;
+    box-shadow: 4px 4px black;
+}
+
+.overview-table{
+    margin: 1rem auto;
+    height: 100%;
+    width: 100%;
+}
+
+.overview-table__image{
+    border-radius: 50%;
+    width: 150px;
+    min-width: 150px;
+    min-height: 150px;
+    height: 150px;
+}
+
+.overview-table__image img{
+    width: 100%;
+    height: 100%;
+}
+
+.overview-table__detail-table{
+    height: 100%;
+    width: 60%;
+    padding: 0.5rem;
+    border: black solid 2px;
+    border-radius: 8px;
+}
+
+.overview-table__detail-table td{
+    text-transform: uppercase;
+    color: white;
+}
+
+
+@media (max-width: 1045px) {
+    #content{
+        padding: 2rem;;
+        grid-auto-rows: auto;
+        grid-gap: 1rem;
+        display: grid;
+        grid-template-columns: [con-start] 100% [con-end];
+        grid-template-areas: "overview"
+                            "info"
+                            "main";
+
+    }
+    
 }

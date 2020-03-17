@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width initial-scale=1.0">
-    <title>Title</title>
+    <title>YourTwitter - Overview</title>
     <link href="../static/css/user_styles.css" rel="stylesheet">
-    <script src="../static/js/userInfo.js"></script>
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-base.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-tag-cloud.min.js"></script>
 </head>
 <body>
 <div id="root">
     <header class="main-header">
         <div>
             <a class="main-header__brand" href="#root">
-                <img src="../static/images/Twitter_Logo_WhiteOnBlue.svg" alt="logo"> <h1>Twitter analyzer </h1></a>
+                <img src="../static/images/Twitter_Logo_WhiteOnBlue.svg" alt="logo"> <h1>Your Twitter</h1></a>
         </div>
         <nav class="main-nav">
             <ul class="main-nav__items">
@@ -23,10 +24,21 @@
         </nav>
     </header>
     <div id="content">
-        <div class="overview"></div>
-        <div class="first-tweet"></div>
-        <div class="tweet-cloud"></div>
+        <section class="content-item overview">
+            <h2 class="content-item__topic">General info</h2>
+            <div class="content-item__description"></div>
+        </section>
+        <section class="content-item first-tweet">
+            <h2 class="content-item__topic">First and last tweet</h2>
+            <div class="content-item__description"></div>
+        </section>
+        <section class="content-item tweets-cloud">
+            <h2 class="content-item__topic">Tweet Cloud</h2>
+            <div class="content-item__description"></div>
+        </section>
     </div>
 </div>
+
+<script src="../static/js/userInfo.js"></script>
 </body>
 </html>
