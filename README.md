@@ -28,9 +28,11 @@ Presentation and login to Twitter account is done via web application.
 <p>Session access pages are stored for the length of the session, i.e. until the browser is closed. 
 The application also allows you to log out.
 </p>
-<h2>running applications</h2>
-<p>To launch applications, in the folder containing the project and pom.xml file, type the command<br><br><b>mvn clean -D skipTests package spring-boot:run</b>.
-<br><br>
+
+## Running applications
+To launch applications, in the folder containing the project and pom.xml file
+
+### `mvn clean -D skipTests package spring-boot:run`
 
 ## Authorization
 
@@ -38,12 +40,5 @@ Logging in to the application is via Twitter OAuth 1.0. When you click the SignI
 
 ## Operation
 
-The application uses SpringBoot in two ways. Default endpoint with value localhost:8080 respond with HTML page containing login.After successful login the second page of application available under endpoint /info/overview works like a SPA page.
-To start the applications, type<br> in the folder containing the project and pom.xml file.
-### `mvn clean -D skipTests package spring-boot:run`
-
-
-## Operation
-
-The application uses SpringBoot in two ways.Default endpoint at localhost:8080 respond with HTML page containing login. After successful login the second page of the application available at localhost:8080/info/overview works like a SPA application.  All data display activities take place on client side using code written in Javascript, CSS, HTML, while communication with Spring-a server takes place using REST standard. Communication with Twitter
+The application uses SpringBoot in two ways.Default endpoint at localhost:8080 respond with HTML page containing login. After successful login the second page of the application available at localhost:8080/info/overview works like a SPA application.  All data display activities take place on client side using code written in Javascript, CSS, HTML, while communication with Spring-a server takes place using REST standard. Communication with Twitter take place in Java code
 
