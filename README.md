@@ -10,7 +10,7 @@ Presentation and login to Twitter account is done via web application.
 - Spring-boot
 - HTML, 
 - CSS
-- JavaScript
+- Vanilla JavaScript ES6+
 - Twitter4j libraries
 
 ## Preview
