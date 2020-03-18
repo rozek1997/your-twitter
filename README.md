@@ -1,7 +1,6 @@
 # Your Twitter 
 
-## Overview
-An application that allows you to download information from the Twitter API and present the results in a friendly, enjoyable way. <br>
+An application that allows you to download information about yours account from the Twitter API and present the results in a friendly, enjoyable way. <br>
 Presentation and login to Twitter account is done via web application. 
 
 ## The application has been created with use:
@@ -15,7 +14,7 @@ Presentation and login to Twitter account is done via web application.
 
 ## Preview
 
-
+### Sign-in page
 ![Sign In page](img/sign_page.PNG)
 
 <p> After successfully logging in to the application, the user is presented with data:</p>
